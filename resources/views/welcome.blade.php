@@ -75,18 +75,8 @@
         
       </div>
       <div class="px-2 pt-2 pb-3 space-y-1">
-
-        @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            @auth
-                <a href="{{ url('/dashboard') }}" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
-            @else
-                <a href="{{ route('login') }}" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Log in</a>
-
-                
-            @endauth
-        </div>
-    @endif
+        <a href="{{ route('login') }}" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Login</a>
+       
         
        
   
