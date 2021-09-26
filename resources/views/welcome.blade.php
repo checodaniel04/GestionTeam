@@ -27,6 +27,17 @@
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
+          @if (Route::has('login'))
+          <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+              @auth
+                  <a href="{{ url('/dashboard') }}" class="text-sm  underline text-white">Dashboard</a>
+              @else
+                  <a href="{{ route('login') }}" class="text-sm underline text-white">Log in</a>
+
+                  
+              @endauth
+          </div>
+      @endif
           
         </div>
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
@@ -41,21 +52,7 @@
   
               
             </div>
-            <div>
-              <body class="antialiased">
-                <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-                @if (Route::has('login'))
-                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                        @auth
-                            <a href="{{ url('/dashboard') }}" class="text-sm  underline text-white">Dashboard</a>
-                        @else
-                            <a href="{{ route('login') }}" class="text-sm underline text-white">Log in</a>
-    
-                            
-                        @endauth
-                    </div>
-                @endif
-            </div>
+           
           </div>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
