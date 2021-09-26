@@ -32,7 +32,7 @@
                 </div>
                 @else
                 <div class="image-wrapper">
-                    <img id="picture" src="https://leslie.sftcontrol.com/storage/post/09.jpg" alt="">
+                    <img id="picture" src="https://gestionteam.sftcontrol.com/storage/post/09.jpg" alt="">
                 </div>
                 @endif
             
